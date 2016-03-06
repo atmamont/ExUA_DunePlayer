@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Wi-b7-JSL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ex.UA -> Dune-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExUA_DunePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLv-du-Dv5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iLv-du-Dv5" secondAttribute="bottom" id="AIn-sw-IEx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLv-du-Dv5" secondAttribute="trailing" constant="-20" id="Jsi-s6-d2e"/>
+                            <constraint firstItem="iLv-du-Dv5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Tq6-cE-mei"/>
+                            <constraint firstItem="iLv-du-Dv5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rih-Oh-tIb"/>
+                            <constraint firstItem="iLv-du-Dv5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ucn-fi-4gT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rih-Oh-tIb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ex.UA -&gt; Dune" id="WW0-Br-7N1">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="bcO-nt-ehr">
+                            <connections>
+                                <action selector="homeTapped:" destination="BYZ-38-t0r" id="Igh-gm-oU6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="v3s-la-mPn">
+                            <connections>
+                                <segue destination="n3U-1H-DWb" kind="show" id="nLi-5E-DQP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainView" destination="iLv-du-Dv5" id="b8n-JI-ZLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="239"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qSu-sf-H25">
+            <objects>
+                <viewController id="n3U-1H-DWb" customClass="SettingsViewController" customModule="ExUA_DunePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="txQ-eD-OnF"/>
+                        <viewControllerLayoutGuide type="bottom" id="ejO-S0-7IQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XLv-Xw-MaI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base EX.UA URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-X4-ugH">
+                                <rect key="frame" x="20" y="72" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wux-Ve-wzU">
+                                <rect key="frame" x="20" y="101" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiK-ad-czx">
+                                <rect key="frame" x="20" y="168" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUNE IP address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-tW-Wnl">
+                                <rect key="frame" x="20" y="139" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wux-Ve-wzU" firstAttribute="top" secondItem="SP1-X4-ugH" secondAttribute="bottom" constant="8" id="55Y-8o-yu3"/>
+                            <constraint firstItem="Wux-Ve-wzU" firstAttribute="trailing" secondItem="XLv-Xw-MaI" secondAttribute="trailingMargin" id="6vM-2p-6fs"/>
+                            <constraint firstItem="GiK-ad-czx" firstAttribute="trailing" secondItem="XLv-Xw-MaI" secondAttribute="trailingMargin" id="8bH-4H-M8t"/>
+                            <constraint firstItem="MPT-tW-Wnl" firstAttribute="top" secondItem="Wux-Ve-wzU" secondAttribute="bottom" constant="8" id="PTi-PT-i7N"/>
+                            <constraint firstItem="SP1-X4-ugH" firstAttribute="top" secondItem="txQ-eD-OnF" secondAttribute="bottom" constant="8" id="QTM-vA-qcv"/>
+                            <constraint firstItem="Wux-Ve-wzU" firstAttribute="leading" secondItem="XLv-Xw-MaI" secondAttribute="leadingMargin" id="aQo-8p-pqY"/>
+                            <constraint firstItem="GiK-ad-czx" firstAttribute="leading" secondItem="XLv-Xw-MaI" secondAttribute="leadingMargin" id="evR-3U-3MX"/>
+                            <constraint firstItem="MPT-tW-Wnl" firstAttribute="leading" secondItem="XLv-Xw-MaI" secondAttribute="leadingMargin" id="sFU-Ah-9cD"/>
+                            <constraint firstItem="SP1-X4-ugH" firstAttribute="leading" secondItem="XLv-Xw-MaI" secondAttribute="leadingMargin" id="wd3-qy-K0q"/>
+                            <constraint firstItem="GiK-ad-czx" firstAttribute="top" secondItem="MPT-tW-Wnl" secondAttribute="bottom" constant="8" id="xXE-Ii-wVX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="nt0-5u-6uB"/>
+                    <connections>
+                        <outlet property="baseURLTextField" destination="Wux-Ve-wzU" id="2dN-xi-djd"/>
+                        <outlet property="duneIPTextField" destination="GiK-ad-czx" id="irR-26-aez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZB-D6-Xrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="239"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uG3-5p-h6v">
+            <objects>
+                <navigationController id="8Wi-b7-JSL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRi-Ck-8Vj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UJw-4d-dpJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHu-4V-WD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="239"/>
+        </scene>
+    </scenes>
+</document>
