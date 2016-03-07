@@ -1,8 +1,5 @@
 # ExUA_DunePlayer
-iOS helper application for sending media files to Dune player
-
-##Project Name
-Ex.UA to Dune media player for iOS
+iOS app for sending media files from EX.UA to Dune player using Dune IP control
 
 ##Usage
 
