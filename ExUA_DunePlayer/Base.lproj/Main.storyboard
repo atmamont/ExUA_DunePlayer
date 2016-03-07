@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Ex.UA -> Dune-->
+        <!--EX.UA - DUNE-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExUA_DunePlayer" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,25 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLv-du-Dv5">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pP-SB-RgZ">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="bookmarks" id="bod-Sl-uxe">
+                                        <connections>
+                                            <segue destination="C6U-DP-GOO" kind="show" identifier="addFav" id="7tm-JF-VtX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P75-9C-v4R"/>
+                                    <barButtonItem title="Item" systemItem="add" id="IJR-5b-RVR">
+                                        <connections>
+                                            <action selector="addFavPressed:" destination="BYZ-38-t0r" id="p1s-Ia-diu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0pP-SB-RgZ" secondAttribute="bottom" id="59a-FQ-pUG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iLv-du-Dv5" secondAttribute="bottom" id="AIn-sw-IEx"/>
+                            <constraint firstItem="0pP-SB-RgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="CtF-2J-pKm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0pP-SB-RgZ" secondAttribute="trailing" constant="-20" id="JgP-Qq-Dnn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iLv-du-Dv5" secondAttribute="trailing" constant="-20" id="Jsi-s6-d2e"/>
                             <constraint firstItem="iLv-du-Dv5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Tq6-cE-mei"/>
+                            <constraint firstItem="0pP-SB-RgZ" firstAttribute="top" secondItem="iLv-du-Dv5" secondAttribute="bottom" id="n7Q-ib-F88"/>
                             <constraint firstItem="iLv-du-Dv5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rih-Oh-tIb"/>
                             <constraint firstItem="iLv-du-Dv5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ucn-fi-4gT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="rih-Oh-tIb"/>
+                                <exclude reference="AIn-sw-IEx"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Ex.UA -&gt; Dune" id="WW0-Br-7N1">
+                    <navigationItem key="navigationItem" title="EX.UA - DUNE" id="WW0-Br-7N1">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="bcO-nt-ehr">
                             <connections>
                                 <action selector="homeTapped:" destination="BYZ-38-t0r" id="Igh-gm-oU6"/>
@@ -57,6 +78,54 @@
             </objects>
             <point key="canvasLocation" x="1057" y="239"/>
         </scene>
+        <!--Favorites Table View Controller-->
+        <scene sceneID="cNp-ry-jEA">
+            <objects>
+                <tableViewController id="C6U-DP-GOO" customClass="FavoritesTableViewController" customModule="ExUA_DunePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eKp-bs-1Ph">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favCell" id="R2z-vn-tqp" customClass="FavoriteTableViewCell" customModule="ExUA_DunePlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R2z-vn-tqp" id="FJe-id-F69">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzs-jo-qW3">
+                                            <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Uzs-jo-qW3" firstAttribute="centerY" secondItem="FJe-id-F69" secondAttribute="centerY" id="0ZB-Zn-5It"/>
+                                        <constraint firstItem="Uzs-jo-qW3" firstAttribute="trailing" secondItem="FJe-id-F69" secondAttribute="trailingMargin" id="23G-ed-r7A"/>
+                                        <constraint firstItem="Uzs-jo-qW3" firstAttribute="leading" secondItem="FJe-id-F69" secondAttribute="leadingMargin" id="mAk-MG-W5Z"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="Uzs-jo-qW3" id="QzR-mt-6cR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C6U-DP-GOO" id="vGG-db-crB"/>
+                            <outlet property="delegate" destination="C6U-DP-GOO" id="9ph-Hs-IbQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="ikz-c8-f7L" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="oqT-Zj-XO1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEk-Wy-drO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ikz-c8-f7L" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="1005"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="qSu-sf-H25">
             <objects>
@@ -72,7 +141,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base EX.UA URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-X4-ugH">
                                 <rect key="frame" x="20" y="72" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wux-Ve-wzU">
@@ -88,7 +157,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUNE IP address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-tW-Wnl">
                                 <rect key="frame" x="20" y="139" width="131" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
