@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5514B6E51C8B7875003DB789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514B6E41C8B7875003DB789 /* AppDelegate.swift */; };
-		5514B6E71C8B7875003DB789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514B6E61C8B7875003DB789 /* ViewController.swift */; };
 		5514B6EA1C8B7875003DB789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5514B6E81C8B7875003DB789 /* Main.storyboard */; };
 		5514B6EC1C8B7875003DB789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5514B6EB1C8B7875003DB789 /* Assets.xcassets */; };
 		5514B6EF1C8B7875003DB789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5514B6ED1C8B7875003DB789 /* LaunchScreen.storyboard */; };
 		5514B6F71C8B86EC003DB789 /* dune.js in Resources */ = {isa = PBXBuildFile; fileRef = 5514B6F61C8B86EB003DB789 /* dune.js */; };
 		5514B6FB1C8CB521003DB789 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514B6FA1C8CB521003DB789 /* SettingsViewController.swift */; };
+		55E0A9F31C8E157200FE33BA /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0A9F11C8E12B500FE33BA /* FavoritesTableViewController.swift */; };
+		55E0A9F41C8E157600FE33BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514B6E61C8B7875003DB789 /* ViewController.swift */; };
+		55E0A9F61C8E165700FE33BA /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0A9F51C8E165700FE33BA /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5514B6F01C8B7875003DB789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5514B6F61C8B86EB003DB789 /* dune.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dune.js; sourceTree = "<group>"; };
 		5514B6FA1C8CB521003DB789 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		55E0A9F11C8E12B500FE33BA /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		55E0A9F51C8E165700FE33BA /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				5514B6E41C8B7875003DB789 /* AppDelegate.swift */,
 				5514B6E61C8B7875003DB789 /* ViewController.swift */,
 				5514B6E81C8B7875003DB789 /* Main.storyboard */,
+				55E0A9F51C8E165700FE33BA /* FavoriteTableViewCell.swift */,
 				5514B6FA1C8CB521003DB789 /* SettingsViewController.swift */,
+				55E0A9F11C8E12B500FE33BA /* FavoritesTableViewController.swift */,
 				5514B6F61C8B86EB003DB789 /* dune.js */,
 				5514B6EB1C8B7875003DB789 /* Assets.xcassets */,
 				5514B6ED1C8B7875003DB789 /* LaunchScreen.storyboard */,
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5514B6E71C8B7875003DB789 /* ViewController.swift in Sources */,
 				5514B6E51C8B7875003DB789 /* AppDelegate.swift in Sources */,
 				5514B6FB1C8CB521003DB789 /* SettingsViewController.swift in Sources */,
+				55E0A9F41C8E157600FE33BA /* ViewController.swift in Sources */,
+				55E0A9F31C8E157200FE33BA /* FavoritesTableViewController.swift in Sources */,
+				55E0A9F61C8E165700FE33BA /* FavoriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
