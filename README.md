@@ -1,4 +1,4 @@
-# ExUA_DunePlayer
+# Ex.UA to Dune for iOS
 iOS app for sending media files from EX.UA to Dune player using Dune IP control
 
 ##Usage
