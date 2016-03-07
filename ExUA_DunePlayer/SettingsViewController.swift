@@ -32,7 +32,6 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         // restoring settings
-        Settings.sharedInstance.loadSettings()
         duneIPTextField.text = Settings.sharedInstance.duneIP
         baseURLTextField.text = Settings.sharedInstance.baseURL
     }
