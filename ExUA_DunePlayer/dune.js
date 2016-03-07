@@ -18,9 +18,10 @@ for (var i = 0; i < rows.length; i++) //цикл по всем ссылкам
         var DuneDiv = document.createElement('div');  //новый элемент див
         var DuneLink =DuneDiv.appendChild(document.createElement('a')); //будет новая ссылка
             DuneLink.id="dUneL";
-            DuneLink.innerHTML='Play with Dune';		
+            DuneLink.innerHTML='PLAY WITH DUNE';
             DuneLink.href=DUNE_START_PLAY+oneHref.href;
-            DuneLink.target="_blank";
+//            DuneLink.target="_blank";
+        window.webkit.messageHandlers.notification.postMessage({body: DuneLink.href});
         var prNode=oneHref.parentNode;
         prNode.insertBefore(DuneDiv, oneHref);	//рисуем ссылку рядом с оригинальной
     } 
